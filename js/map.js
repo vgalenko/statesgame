@@ -39,4 +39,16 @@ function initMap() {
       }
     ]
   });
+
+  var markerWA = new google.maps.Marker({
+    position: {lat: 47.231262, lng: -119.885847},
+    map: map,
+    title: 'WASHINGTON!'
+  });
+
+  var markerOR = new google.maps.Marker({
+    position: {lat: 43.803612, lng: -120.496233},
+    map: map,
+    title: 'Oregon!'
+  });
 }
