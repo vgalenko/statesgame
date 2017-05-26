@@ -1,0 +1,412 @@
+.container {
+  position: relative;
+  width: 1100px;
+}
+
+img {
+  width: 100%;
+}
+
+#washington {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 35px;
+  left: 120px;
+  cursor: pointer;
+  background: #56bd85;
+  border: solid 1px black;
+}
+#oregon {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  top: 100px;
+  left: 70px;
+  cursor: pointer;
+  background: #b9856d;
+  border: solid 1px green;
+  transform: rotate(15deg);
+}
+#california {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  top: 295px;
+  left: 1px;
+  cursor: pointer;
+  background: #b25198;
+  border: solid 1px black;
+  transform: rotate(60deg);
+}
+#nevada {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  top: 200px;
+  left: 120px;
+  cursor: pointer;
+  background: #ffdcb6;
+  border: solid 1px green;
+  transform: rotate(15deg);
+}
+#idaho {
+  position: absolute;
+  width: 60px;
+  height: 70px;
+  top: 135px;
+  left: 200px;
+  cursor: pointer;
+  background: #fef102;
+  border: solid 1px green;
+
+}
+#utah {
+  position: absolute;
+  width: 90px;
+  height: 80px;
+  top: 255px;
+  left: 220px;
+  cursor: pointer;
+  background: #f89448;
+  border: solid 1px green;
+  transform: rotate(10deg);
+}
+#arizona {
+  position: absolute;
+  width: 90px;
+  height: 110px;
+  top: 355px;
+  left: 200px;
+  cursor: pointer;
+  background: #92b9da;
+  border: solid 1px green;
+  transform: rotate(10deg);
+}
+
+#alaska {
+  position: absolute;
+  width: 75px;
+  height: 80px;
+  top: 520px;
+  left: 195px;
+  cursor: pointer;
+  background: #7bccc6;
+  border: solid 1px green;
+}
+#montana {
+  position: absolute;
+  width: 160px;
+  height: 80px;
+  top: 60px;
+  left: 265px;
+  cursor: pointer;
+  background: #bbe1f4;
+  border: solid 1px green;
+  transform: rotate(10deg);
+}
+#wyoming {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  top: 165px;
+  left: 300px;
+  cursor: pointer;
+  background: #c277ad;
+  border: solid 1px green;
+  transform: rotate(10deg);
+}
+#colorado {
+  position: absolute;
+  width: 125px;
+  height: 95px;
+  top: 265px;
+  left: 320px;
+  cursor: pointer;
+  background: #02b26a;
+  border: solid 1px green;
+  transform: rotate(8deg);
+}
+#newmexico {
+  position: absolute;
+  width: 115px;
+  height: 110px;
+  top: 370px;
+  left: 300px;
+  cursor: pointer;
+  background: #ffca06;
+  border: solid 1px green;
+  transform: rotate(8deg);
+}
+#northdakota {
+  position: absolute;
+  width: 110px;
+  height: 65px;
+  top: 75px;
+  left: 440px;
+  cursor: pointer;
+  background: #807aba;
+  border: solid 1px green;
+}
+#southdakota {
+  position: absolute;
+  width: 110px;
+  height: 65px;
+  top: 155px;
+  left: 440px;
+  cursor: pointer;
+  background: #6ed0f7;
+  border: solid 1px green;
+  transform: rotate(5deg);
+}
+#nebraska {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  top: 235px;
+  left: 460px;
+  cursor: pointer;
+  background: #ed1941;
+  border: solid 1px green;
+  transform: rotate(5deg);
+}
+#kansas {
+  position: absolute;
+  width: 130px;
+  height: 65px;
+  top: 305px;
+  left: 455px;
+  cursor: pointer;
+  background: #f0c696;
+  border: solid 1px green;
+  transform: rotate(3deg);
+}
+#oklahoma {
+  position: absolute;
+  width: 105px;
+  height: 60px;
+  top: 380px;
+  left: 490px;
+  cursor: pointer;
+  background: #a6664b;
+  border: solid 1px green;
+  transform: rotate(3deg);
+}
+#texas {
+  position: absolute;
+  width: 180px;
+  height: 90px;
+  top: 465px;
+  left: 420px;
+  cursor: pointer;
+  background: #9ea53d;
+  border: solid 1px green;
+  transform: rotate(3deg);
+}
+#hawaii {
+  position: absolute;
+  width: 180px;
+  height: 50px;
+  top: 590px;
+  left: 300px;
+  cursor: pointer;
+  //background: #3bb44b;
+  border: solid 1px green;
+  transform: rotate(35deg);
+}
+#minesota {
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  top: 90px;
+  left: 570px;
+  cursor: pointer;
+  background: #fdc58a;
+  border: solid 1px green;
+}
+#iowa {
+  position: absolute;
+  width: 80px;
+  height: 65px;
+  top: 220px;
+  left: 580px;
+  cursor: pointer;
+  background: #c5de9c;
+  border: solid 1px green;
+}
+#missouri {
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  top: 295px;
+  left: 600px;
+  cursor: pointer;
+  background: #27bae5;
+  border: solid 1px green;
+  transform: rotate(-5deg);
+}
+#arkansas {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  top: 395px;
+  left: 610px;
+  cursor: pointer;
+  background: #b4d234;
+  border: solid 1px green;
+  transform: rotate(-3deg);
+}
+#louisiana {
+  position: absolute;
+  width: 35px;
+  height: 70px;
+  top: 485px;
+  left: 625px;
+  cursor: pointer;
+  background: #8e65ab;
+  border: solid 1px green;
+  transform: rotate(-3deg);
+}
+#wisconsin {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  top: 150px;
+  left: 655px;
+  cursor: pointer;
+  background: #a185bf;
+  border: solid 1px green;
+  transform: rotate(-35deg);
+}
+#illinois {
+  position: absolute;
+  width: 40px;
+  height: 90px;
+  top: 245px;
+  left: 690px;
+  cursor: pointer;
+  background: #fff460;
+  border: solid 1px green;
+  transform: rotate(-5deg);
+}
+#mississippi {
+  position: absolute;
+  width: 40px;
+  height: 90px;
+  top: 435px;
+  left: 690px;
+  cursor: pointer;
+  background: #faa74b;
+  border: solid 1px green;
+  transform: rotate(2deg);
+}
+#michigan {
+  position: absolute;
+  width: 40px;
+  height: 65px;
+  top: 180px;
+  left: 755px;
+  cursor: pointer;
+  background: #00a650;
+  border: solid 1px green;
+  transform: rotate(-15deg);
+}
+#indiana {
+  position: absolute;
+  width: 45px;
+  height: 70px;
+  top: 255px;
+  left: 740px;
+  cursor: pointer;
+  background: #c69b6e;
+  border: solid 1px green;
+  transform: rotate(-5deg);
+}
+#kentucky {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 350px;
+  left: 740px;
+  cursor: pointer;
+  background: #01a69f;
+  border: solid 1px green;
+  transform: rotate(-5deg);
+}
+#tennessee {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 390px;
+  left: 710px;
+  cursor: pointer;
+  background: #f46f22;
+  border: solid 1px green;
+  transform: rotate(-6deg);
+}
+#alabama {
+  position: absolute;
+  width: 50px;
+  height: 90px;
+  top: 430px;
+  left: 740px;
+  cursor: pointer;
+  background: #00a650;
+  border: solid 1px green;
+  transform: rotate(-6deg);
+}
+#ohio {
+  position: absolute;
+  width: 60px;
+  height: 55px;
+  top: 255px;
+  left: 795px;
+  cursor: pointer;
+  background: #f7941d;
+  border: solid 1px green;
+  transform: rotate(-5deg);
+}
+#georgia {
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  top: 440px;
+  left: 815px;
+  cursor: pointer;
+  background: #f15b5c;
+  border: solid 1px green;
+  transform: rotate(-25deg);
+}
+#florida {
+  position: absolute;
+  width: 25px;
+  height: 110px;
+  top: 530px;
+  left: 875px;
+  cursor: pointer;
+  background: #fef102;
+  border: solid 1px green;
+  transform: rotate(-25deg);
+}
+#newyork {
+  position: absolute;
+  width: 90px;
+  height: 25px;
+  top: 190px;
+  left: 895px;
+  cursor: pointer;
+  background: #00a650;
+  border: solid 1px green;
+  transform: rotate(-15deg);
+}
+#pennsylvania {
+  position: absolute;
+  width: 90px;
+  height: 45px;
+  top: 230px;
+  left: 875px;
+  cursor: pointer;
+  background: #00a650;
+  border: solid 1px green;
+  transform: rotate(-10deg);
+}
