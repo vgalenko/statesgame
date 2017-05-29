@@ -1,54 +1,38 @@
-var map;
+var states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 39.265567, lng: -99.497899},
-    zoom: 4,
-    styles:[
-      {
-        'elementType': 'labels',
-        'stylers': [
-          {
-            'visibility': 'off'
-          }
-        ]
-      },
-      {
-        'featureType': 'administrative.land_parcel',
-        'stylers': [
-          {
-            'visibility': 'off'
-          }
-        ]
-      },
-      {
-        'featureType': 'administrative.neighborhood',
-        'stylers': [
-          {
-            'visibility': 'off'
-          }
-        ]
-      },
-      {
-        'featureType': 'water',
-        'stylers': [
-          {
-            'visibility': 'on'
-          }
-        ]
-      }
-    ]
-  });
+var statesObj = [];
 
-  var markerWA = new google.maps.Marker({
-    position: {lat: 47.231262, lng: -119.885847},
-    map: map,
-    title: 'WASHINGTON!'
-  });
-
-  var markerOR = new google.maps.Marker({
-    position: {lat: 43.803612, lng: -120.496233},
-    map: map,
-    title: 'Oregon!'
-  });
+function States(name) {
+  this.name = name;
+  this.shown = false;
 }
+
+function instantiatedStateObj() {
+  for (var i = 0; i < states.length; i++) {
+    statesObj.push(new States(states[i]));
+  }
+}
+
+
+// Fisher-Yates Shuffle Explained by Adam Khoury
+// https://www.youtube.com/watch?v=tLxBwSL3lPQ
+Array.prototype.shuffle = function() {
+  var i = this.length;
+  var j; // our random number we generate
+  var temp; // holds temporary value so we can swap between indices
+
+  while(--i > 0) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this[j];
+    this[j] = this[i]; // swaps position with whatever is in the random position
+    this[i] = temp; // target index position and put temp value in
+    i--;
+  }
+  return this;
+};
+
+function launchGame() {
+  instantiatedStateObj();
+}
+
+launchGame();
