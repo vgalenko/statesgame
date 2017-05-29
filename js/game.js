@@ -14,8 +14,14 @@ function instantiatedStateObj() {
 }
 
 
-// Fisher-Yates Shuffle Explained by Adam Khoury
-// https://www.youtube.com/watch?v=tLxBwSL3lPQ
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+    Fisher-Yates Shuffle Explained by Adam Khoury
+    https://www.youtube.com/watch?v=tLxBwSL3lPQ
+* * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 Array.prototype.shuffle = function() {
   var i = this.length;
   var j; // our random number we generate
