@@ -1,13 +1,16 @@
-/* GLOBAL */
+div {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin: 3px 3px;
+  font: 22px bold;
+  outline: 1px orange solid;
+}
 
-  /* Always set the map height explicitly to define the size of the div
-   * element that contains the map. */
-  #map {
-    height: 100%;
-  }
-  /* Optional: Makes the sample page fill the window. */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+.odd {
+  background: blue;
+}
+
+.even {
+  background: yellow;
+}
