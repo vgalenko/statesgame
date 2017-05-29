@@ -5,12 +5,18 @@ var statesObj = [];
 function States(name) {
   this.name = name;
   this.shown = false;
+  this.element = document.getElementById(this.name);
+  this.clicked = this.element.addEventListener('click', myFunction);
 }
 
 function instantiatedStateObj() {
   for (var i = 0; i < states.length; i++) {
     statesObj.push(new States(states[i]));
   }
+}
+
+function myFunction() {
+  console.log('2 + 2 = 4');
 }
 
 
@@ -32,13 +38,13 @@ Array.prototype.shuffle = function() {
     temp = this[j];
     this[j] = this[i]; // swaps position with whatever is in the random position
     this[i] = temp; // target index position and put temp value in
-    i--;
   }
   return this;
 };
 
 function launchGame() {
-  instantiatedStateObj();
+  instantiatedStateObj(); // instantiates states objects
+  statesObj.shuffle(); // shuffles states
 }
 
 launchGame();
