@@ -5,23 +5,25 @@ var statesObj = [];
 function States(name) {
   this.name = name;
   this.shown = false;
-  this.element = document.getElementById(this.name);
-  this.clicked = this.element.addEventListener('click', generic);
 }
 
-function instantiateStateObj(statesArr) {
-  for (var i = 0; i < statesArr.length; i++) {
-    statesObj.push(new States(statesArr[i]));
+function instantiateStateObj() {
+  for (var i = 0; i < states.length; i++) {
+    statesObj.push(new States(states[i]));
   }
 }
+//
+// States.prototype.getName = function() {
+//   console.log(this.element.id);
+// };
 
-function generic() {
-  console.log('click is working');
-}
-
-var map = new Map();
-map.populateMap = statesObj;
-map.instantiatedStates = instantiateStateObj(states);
+// function generic() {
+//   console.log('generic');
+// }
+//
+// var map = new Map();
+// map.populateMap = statesObj;
+// map.instantiatedStates = instantiateStateObj(states);
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
     Fisher-Yates Shuffle Explained by Adam Khoury
@@ -42,12 +44,30 @@ Array.prototype.shuffle = function() {
   return this;
 };
 
+
+// need to be able to grab the id.
+// need to attach an event listener.
 // Each time you click it will tell you if it's right or wrong.
 // when the right answer is clicked, it will go to the next state.
-// * I need to build something that will populate the DOM.
 
+var washington = document.getElementById('washington');
+washington.addEventListener('click', genericWA);
+
+function genericWA() {
+  statesObj[states.indexOf(washington.id)];
+}
+
+
+// appends state name to DOM
 var populateHeader = document.getElementById('populate-header');
 
-function askQuestion() {
-  populateHeader.innerHTML = ['<span> VERY LONG TEXT SO I DONT MISS IT </span>'];
+function askQuestion(stateName) {
+  populateHeader.innerHTML = stateName;
 }
+
+
+function launchGame() {
+  instantiateStateObj();
+}
+
+launchGame();
