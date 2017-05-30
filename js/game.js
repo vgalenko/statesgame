@@ -1,6 +1,9 @@
 var states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
 
+var shuffledStates = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
+
 var statesObj = [];
+var clickedState;
 
 function States(name) {
   this.name = name;
@@ -13,46 +16,7 @@ function instantiateStateObj() {
   }
 }
 
-// function mainListener() {
-//   for (var i = 0; i < states.length; i++) {
-//     (document.getElementById('\'' + states[i] + '\'')).addEventListener('click', getName);
-//   }
-// }
-//
-// States.prototype.getName = function() {
-//   console.log(this.element.id);
-// };
 
-// function generic() {
-//   console.log('generic');
-// }
-//
-// var map = new Map();
-// map.populateMap = statesObj;
-// map.instantiatedStates = instantiateStateObj(states);
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * *
-    Fisher-Yates Shuffle Explained by Adam Khoury
-    https://www.youtube.com/watch?v=tLxBwSL3lPQ
-* * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-Array.prototype.shuffle = function() {
-  var i = this.length;
-  var j; // our random number we generate
-  var temp; // holds temporary value so we can swap between indices
-
-  while(--i > 0) {
-    j = Math.floor(Math.random() * (i + 1));
-    temp = this[j];
-    this[j] = this[i]; // swaps position with whatever is in the random position
-    this[i] = temp; // target index position and put temp value in
-  }
-  return this;
-};
-
-
-// need to be able to grab the id.
-// need to attach an event listener.
 // Each time you click it will tell you if it's right or wrong.
 // when the right answer is clicked, it will go to the next state.
 
@@ -108,21 +72,42 @@ document.getElementById('wisconsin').addEventListener('click', getName);
 document.getElementById('wyoming').addEventListener('click', getName);
 
 function getName() {
-  var stateName = statesObj[states.indexOf(this.id)].name;
-  console.log('hey:', stateName);
+  clickedState = statesObj[states.indexOf(this.id)].name;
+  console.log('hey:', clickedState);
 }
 
 
 // appends state name to DOM
-// var populateHeader = document.getElementById('populate-header');
-//
-// function askQuestion(stateName) {
-//   populateHeader.innerHTML = stateName;
-// }
+var populateHeader = document.getElementById('populate-header');
 
+function askQuestion(stateName) {
+  populateHeader.innerHTML = stateName;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+    Fisher-Yates Shuffle Explained by Adam Khoury
+    https://www.youtube.com/watch?v=tLxBwSL3lPQ
+* * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+Array.prototype.shuffle = function() {
+  var i = this.length;
+  var j; // our random number we generate
+  var temp; // holds temporary value so we can swap between indices
+
+  while(--i > 0) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this[j];
+    this[j] = this[i]; // swaps position with whatever is in the random position
+    this[i] = temp; // target index position and put temp value in
+  }
+  return this;
+};
 
 function launchGame() {
   instantiateStateObj();
+  shuffledStates.shuffle();
 }
 
 launchGame();
