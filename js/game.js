@@ -6,21 +6,22 @@ function States(name) {
   this.name = name;
   this.shown = false;
   this.element = document.getElementById(this.name);
-  this.clicked = this.element.addEventListener('click', myFunction);
+  this.clicked = this.element.addEventListener('click', generic);
 }
 
-function instantiatedStateObj() {
-  for (var i = 0; i < states.length; i++) {
-    statesObj.push(new States(states[i]));
+function instantiateStateObj(statesArr) {
+  for (var i = 0; i < statesArr.length; i++) {
+    statesObj.push(new States(statesArr[i]));
   }
 }
 
-function myFunction() {
-  console.log('2 + 2 = 4');
+function generic() {
+  console.log('click is working');
 }
 
-
-
+var map = new Map();
+map.populateMap = statesObj;
+map.instantiatedStates = instantiateStateObj(states);
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -41,10 +42,3 @@ Array.prototype.shuffle = function() {
   }
   return this;
 };
-
-function launchGame() {
-  instantiatedStateObj(); // instantiates states objects
-  statesObj.shuffle(); // shuffles states
-}
-
-launchGame();
