@@ -23,7 +23,6 @@ var map = new Map();
 map.populateMap = statesObj;
 map.instantiatedStates = instantiateStateObj(states);
 
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
     Fisher-Yates Shuffle Explained by Adam Khoury
     https://www.youtube.com/watch?v=tLxBwSL3lPQ
@@ -42,3 +41,13 @@ Array.prototype.shuffle = function() {
   }
   return this;
 };
+
+// Each time you click it will tell you if it's right or wrong.
+// when the right answer is clicked, it will go to the next state.
+// * I need to build something that will populate the DOM.
+
+var populateHeader = document.getElementById('populate-header');
+
+function askQuestion() {
+  populateHeader.innerHTML = ['<span> VERY LONG TEXT SO I DONT MISS IT </span>'];
+}
