@@ -4,6 +4,10 @@ body {
   background: black;
 }
 
+header {
+  color: white;
+}
+
 .container {
   position: relative;
   width: 1100px;
