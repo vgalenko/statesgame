@@ -1,0 +1,106 @@
+body {
+  width: 1100px;
+  margin: auto;
+  background: gray;
+}
+
+@font-face {
+	font-family: 'pacfont';
+	src: url('C:/Users/Slavik/codefellows/201/statesgame/pac-font.TTF');
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+  font-family: 'pacfont';
+  font-size: 40px;
+  color: #e71b1e;
+}
+h2 {
+  display: inline-block;
+  position: relative;
+  font-family: 'pacfont';
+  font-size: 40px;
+  color: #f69311;
+  margin-top: -55px;
+}
+#h1 {
+  -webkit-animation: h1 4s;
+  animation: h1 4s;
+  margin-left: 320px;
+  }
+
+ @-webkit-keyframes h1 {
+  from {right: 500px;}
+  to {right: 0px;}
+  }
+
+#h2 {
+  -webkit-animation: h2 4s;
+  animation: h2 4s;
+  margin-left: 20px;
+}
+
+ @-webkit-keyframes h2 {
+  from {left: 500px;}
+  to {left: 0px;}
+}
+section img {
+  position: fixed;
+  opacity: 0.5;
+  border-radius: 2%;
+  background-color: #555;
+  box-shadow: 0 0 5px 30px #555;
+  z-index: -1;
+}
+h3 {
+  float: left;
+  padding-left: 35%;
+  font-family: 'pacfont';
+  font-size: 40px;
+  color: #00ffde;
+}
+.aboutus{
+  float: left;
+  position: absolute;
+  margin-top: 90px;
+  color: ##ff0000;
+  font-family: 'pacfont';
+}
+#jona {
+  width: 200px;
+  height: auto;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 75px;
+  border-radius: 5%;
+  border: dotted 3px #ff0000;
+}
+#vitaliy {
+  width: 200px;
+  height: auto;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 5%;
+  border: dotted 3px #ffb8de;
+}
+#slavik {
+  width: 200px;
+  height: auto;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 5%;
+  border: dotted 3px #ffb847;
+}
+#tim {
+  width: 200px;
+  height: auto;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: auto;
+  border-radius: 5%;
+  border: dotted 3px #ffff00;
+}
