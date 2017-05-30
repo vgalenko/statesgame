@@ -469,3 +469,83 @@ img {
   background: #000;
   border: solid 1px green;
 }
+#vermont {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 110px;
+  left: 915px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #e71b1e;
+}
+#newhampshire {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 169px;
+  left: 1025px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #6efdff;
+}
+#mainestate {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 197px;
+  left: 1025px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #f09f9e;
+}
+#rhodeisland {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 245px;
+  left: 990px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #f69311;
+}
+#connecticut {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 275px;
+  left: 975px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #e71b1e;
+}
+#newjersey {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  top: 300px;
+  left: 975px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #6efdff;
+}
+#delaware {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  top: 323px;
+  left: 975px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #f09f9e;
+}
+#maryland {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  top: 345px;
+  left: 975px;
+  cursor: pointer;
+  background: #000;
+  border: solid 2px #f69311;
+}
