@@ -1,15 +1,18 @@
 body {
   width: 1100px;
   margin: auto;
+  background: black;
 }
 
 .container {
   position: relative;
   width: 1100px;
+  overflow: hidden;
 }
 
 img {
   width: 100%;
+  margin-left: -1px;
 }
 
 #washington {
@@ -217,7 +220,7 @@ img {
   left: 310px;
   cursor: pointer;
   background: #000;
-  border: solid 1px #6efafb;
+  border: solid 2px #6efafb;
 }
 #minesota {
   position: absolute;
