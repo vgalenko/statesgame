@@ -1,6 +1,9 @@
 var states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
 
+var shuffledStates = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
+
 var statesObj = [];
+var clickedState;
 
 function States(name) {
   this.name = name;
@@ -13,23 +16,90 @@ function instantiateStateObj() {
   }
 }
 
-// function mainListener() {
-//   for (var i = 0; i < states.length; i++) {
-//     (document.getElementById('\'' + states[i] + '\'')).addEventListener('click', getName);
-//   }
-// }
-//
-// States.prototype.getName = function() {
-//   console.log(this.element.id);
-// };
+document.getElementById('alabama').addEventListener('click', getClickedState);
+document.getElementById('alaska').addEventListener('click', getClickedState);
+document.getElementById('arizona').addEventListener('click', getClickedState);
+document.getElementById('arkansas').addEventListener('click', getClickedState);
+document.getElementById('california').addEventListener('click', getClickedState);
+document.getElementById('colorado').addEventListener('click', getClickedState);
+document.getElementById('connecticut').addEventListener('click', getClickedState);
+document.getElementById('delaware').addEventListener('click', getClickedState);
+document.getElementById('florida').addEventListener('click', getClickedState);
+document.getElementById('georgia').addEventListener('click', getClickedState);
+document.getElementById('hawaii').addEventListener('click', getClickedState);
+document.getElementById('idaho').addEventListener('click', getClickedState);
+document.getElementById('illinois').addEventListener('click', getClickedState);
+document.getElementById('indiana').addEventListener('click', getClickedState);
+document.getElementById('iowa').addEventListener('click', getClickedState);
+document.getElementById('kansas').addEventListener('click', getClickedState);
+document.getElementById('kentucky').addEventListener('click', getClickedState);
+document.getElementById('louisiana').addEventListener('click', getClickedState);
+document.getElementById('maine').addEventListener('click', getClickedState);
+document.getElementById('maryland').addEventListener('click', getClickedState);
+document.getElementById('massachusetts').addEventListener('click', getClickedState);
+document.getElementById('michigan').addEventListener('click', getClickedState);
+document.getElementById('minnesota').addEventListener('click', getClickedState);
+document.getElementById('mississippi').addEventListener('click', getClickedState);
+document.getElementById('missouri').addEventListener('click', getClickedState);
+document.getElementById('montana').addEventListener('click', getClickedState);
+document.getElementById('nebraska').addEventListener('click', getClickedState);
+document.getElementById('nevada').addEventListener('click', getClickedState);
+document.getElementById('newhampshire').addEventListener('click', getClickedState);
+document.getElementById('newjersey').addEventListener('click', getClickedState);
+document.getElementById('newmexico').addEventListener('click', getClickedState);
+document.getElementById('newyork').addEventListener('click', getClickedState);
+document.getElementById('northcarolina').addEventListener('click', getClickedState);
+document.getElementById('northdakota').addEventListener('click', getClickedState);
+document.getElementById('ohio').addEventListener('click', getClickedState);
+document.getElementById('oklahoma').addEventListener('click', getClickedState);
+document.getElementById('oregon').addEventListener('click', getClickedState);
+document.getElementById('pennsylvania').addEventListener('click', getClickedState);
+document.getElementById('rhodeisland').addEventListener('click', getClickedState);
+document.getElementById('southcarolina').addEventListener('click', getClickedState);
+document.getElementById('southdakota').addEventListener('click', getClickedState);
+document.getElementById('tennessee').addEventListener('click', getClickedState);
+document.getElementById('texas').addEventListener('click', getClickedState);
+document.getElementById('utah').addEventListener('click', getClickedState);
+document.getElementById('vermont').addEventListener('click', getClickedState);
+document.getElementById('virginia').addEventListener('click', getClickedState);
+document.getElementById('washington').addEventListener('click', getClickedState);
+document.getElementById('westvirginia').addEventListener('click', getClickedState);
+document.getElementById('wisconsin').addEventListener('click', getClickedState);
+document.getElementById('wyoming').addEventListener('click', getClickedState);
 
-// function generic() {
-//   console.log('generic');
+function getClickedState() {
+  clickedState = statesObj[states.indexOf(this.id)].name;
+  gamePlay();
+  console.log('clickedState:', clickedState);
+}
+
+// function getAnswerState() {
+//   return statesObj[states.indexOf(this.id)].name;
 // }
-//
-// var map = new Map();
-// map.populateMap = statesObj;
-// map.instantiatedStates = instantiateStateObj(states);
+
+function gamePlay() {
+  askQuestion(shuffledStates[0]);
+  var answer = shuffledStates[0];
+
+  if (clickedState != null) {
+    verify(answer, clickedState);
+  }
+}
+
+function verify(answer, clickedState) {
+  if (answer === clickedState) {
+    console.log('win');
+  } else {
+    console.log('lose');
+  }
+}
+
+// appends state name to DOM
+var populateHeader = document.getElementById('populate-header');
+
+function askQuestion(stateName) {
+  populateHeader.innerHTML = stateName;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
     Fisher-Yates Shuffle Explained by Adam Khoury
@@ -50,79 +120,9 @@ Array.prototype.shuffle = function() {
   return this;
 };
 
-
-// need to be able to grab the id.
-// need to attach an event listener.
-// Each time you click it will tell you if it's right or wrong.
-// when the right answer is clicked, it will go to the next state.
-
-document.getElementById('alabama').addEventListener('click', getName);
-document.getElementById('alaska').addEventListener('click', getName);
-document.getElementById('arizona').addEventListener('click', getName);
-document.getElementById('arkansas').addEventListener('click', getName);
-document.getElementById('california').addEventListener('click', getName);
-document.getElementById('colorado').addEventListener('click', getName);
-document.getElementById('connecticut').addEventListener('click', getName);
-document.getElementById('delaware').addEventListener('click', getName);
-document.getElementById('florida').addEventListener('click', getName);
-document.getElementById('georgia').addEventListener('click', getName);
-document.getElementById('hawaii').addEventListener('click', getName);
-document.getElementById('idaho').addEventListener('click', getName);
-document.getElementById('illinois').addEventListener('click', getName);
-document.getElementById('indiana').addEventListener('click', getName);
-document.getElementById('iowa').addEventListener('click', getName);
-document.getElementById('kansas').addEventListener('click', getName);
-document.getElementById('kentucky').addEventListener('click', getName);
-document.getElementById('louisiana').addEventListener('click', getName);
-document.getElementById('maine').addEventListener('click', getName);
-document.getElementById('maryland').addEventListener('click', getName);
-document.getElementById('massachusetts').addEventListener('click', getName);
-document.getElementById('michigan').addEventListener('click', getName);
-document.getElementById('minnesota').addEventListener('click', getName);
-document.getElementById('mississippi').addEventListener('click', getName);
-document.getElementById('missouri').addEventListener('click', getName);
-document.getElementById('montana').addEventListener('click', getName);
-document.getElementById('nebraska').addEventListener('click', getName);
-document.getElementById('nevada').addEventListener('click', getName);
-document.getElementById('newhampshire').addEventListener('click', getName);
-document.getElementById('newjersey').addEventListener('click', getName);
-document.getElementById('newmexico').addEventListener('click', getName);
-document.getElementById('newyork').addEventListener('click', getName);
-document.getElementById('northcarolina').addEventListener('click', getName);
-document.getElementById('northdakota').addEventListener('click', getName);
-document.getElementById('ohio').addEventListener('click', getName);
-document.getElementById('oklahoma').addEventListener('click', getName);
-document.getElementById('oregon').addEventListener('click', getName);
-document.getElementById('pennsylvania').addEventListener('click', getName);
-document.getElementById('rhodeisland').addEventListener('click', getName);
-document.getElementById('southcarolina').addEventListener('click', getName);
-document.getElementById('southdakota').addEventListener('click', getName);
-document.getElementById('tennessee').addEventListener('click', getName);
-document.getElementById('texas').addEventListener('click', getName);
-document.getElementById('utah').addEventListener('click', getName);
-document.getElementById('vermont').addEventListener('click', getName);
-document.getElementById('virginia').addEventListener('click', getName);
-document.getElementById('washington').addEventListener('click', getName);
-document.getElementById('westvirginia').addEventListener('click', getName);
-document.getElementById('wisconsin').addEventListener('click', getName);
-document.getElementById('wyoming').addEventListener('click', getName);
-
-function getName() {
-  var stateName = statesObj[states.indexOf(this.id)].name;
-  console.log('hey:', stateName);
-}
-
-
-// appends state name to DOM
-// var populateHeader = document.getElementById('populate-header');
-//
-// function askQuestion(stateName) {
-//   populateHeader.innerHTML = stateName;
-// }
-
-
 function launchGame() {
   instantiateStateObj();
+  shuffledStates.shuffle();
 }
 
 launchGame();
