@@ -1,11 +1,129 @@
-body section h2 {
-  font-family: 'Montserrat Subrayada', sans-serif;
-  /*font-family: 'Orbitron', sans-serif;*/
-  font-size: 50px;
+h1 {
+  display: inline-block;
+  position: relative;
+  padding: 30px 0px 30px 0px;
+  font-family: pacfont;
+  font-size: 46px;
+  color: yellow;
 }
 
-#highscore {
-  /*font-family: 'Montserrat Subrayada', sans-serif;*/
-  font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
+@font-face {
+  font-family: pacfont;
+  src: url(pac-font.ttf);
+}
+
+#states {
+  -webkit-animation: movestates 3s;
+  animation: movestates 3s;
+  margin-left: 320px;
+  }
+
+  @-webkit-keyframes movestates {
+  from {right: 500px;}
+  to {right: 0px;}
+  }
+
+#game {
+  -webkit-animation: movegame 3s;
+  animation: movegame 3s;
+  margin-left: 20px;
+}
+
+  @-webkit-keyframes movegame {
+  from {left: 500px;}
+  to {left: 0px;}
+  }
+
+.top-border {
+  padding-left: 5px;
+  border: 3px solid blue;
+  border-radius: 30px;
+}
+
+label {
+  margin-left: 27%;
+  font-size: 26px;
+  color: pink;
+  vertical-align: middle;
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[type="text"] {
+  margin-top: 50px;
+  padding: 5px 0px 5px 0px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: orange;
+  border: 1px solid blue;
+  border-radius: 3px;
+  width: 200px;
+}
+
+button {
+  margin-top: 50px;
+  margin-left: 43%;
+  border: 3px solid blue;
+  padding: 8px 18px;
+  background: black;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-animation: glowing 1500ms infinite;
+  }
+
+  @-webkit-keyframes glowing {
+  0% { background-color: pink;}
+  50% { background-color: red; }
+  100% { background-color: green;}
+}
+
+section {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 50px;
+  padding: 20px 0px 20px 0px;
+  border: 3px solid blue;
+  border-radius: 10px;
+  background: black;
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  color: red;
+}
+
+li {
+  padding-top: 5px;
+  font-family: 'Press Start 2P', cursive;
+  color: orange;
+  font-size: 20px;
+}
+
+footer {
+  border: 3px solid blue;
+  border-radius: 20px;
+  color: pink;
+  margin-top: 8%;
+}
+
+footer p {
+  text-align: center;
+}
+
+.footer-dots {
+  display: inline;
+  font-family: pacfont;
+  font-size: 26px;
+  color: white;
+}
+
+#top-dots {
+  font-size: 32px;
+  color: white;
+  font-family: pacfont;
 }
