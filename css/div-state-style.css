@@ -465,7 +465,7 @@ img {
   border: solid 1px green;
   transform: rotate(28deg);
 }
-#maine {
+#massachusetts {
   position: absolute;
   width: 25px;
   height: 60px;
@@ -495,7 +495,8 @@ img {
   background: #000;
   border: solid 2px #6efdff;
 }
-#massachusetts {
+
+#maine {
   position: absolute;
   width: 35px;
   height: 25px;
