@@ -9,7 +9,7 @@ h1 {
 
 @font-face {
   font-family: pacfont;
-  src: url(pac-font.ttf);
+  src: url('../assets/fonts/pac-font.ttf');
 }
 
 #states {

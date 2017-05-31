@@ -6,7 +6,7 @@ body {
 
 @font-face {
 	font-family: 'pacfont';
-	src: url('C:/Users/Slavik/codefellows/201/statesgame/pac-font.TTF');
+	src: url('../assets/fonts/pac-font.ttf');
 }
 
 h1 {
