@@ -2,21 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Orbitron" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>States Game</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
   <body>
+    <main>
+    <h1 id="states">States</h1>
+    <h1 id="game">Game</h1>
+
+    <div class="top-border">
+      <span id="top-dots">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</span>
+    </div>
+
+    <fieldset>
+      <label for="username">Enter Name:</label>
+      <input id="input" type="text" name="username" placeholder=" enter here">
+    </fieldset>
+
+    <button id="start-btn" type="submit">START</button>
+
     <section>
-      <h2>High Scores!</h2>
-      <input id="input" type="text" placeholder="Enter your name">
-      <!-- <button id="start-btn">Start Game</button> -->
-      <input id="start-btn" type="button" onclick="location.href='game.html'" value="Start Game">
+
+       
+      <h2>High Scores:</h2>
       <ul id="high-score">
-        <!-- data filled dynamically -->
+         <!-- data filled dynamically -->
+        <li>Vitaliy</li>
+        <li>Jonah</li>
+        <li>Slavik</li>
+        <li>Tim</li>
+        <li>Bill</li>
+        <li>Jacob</li>
+        <li>Sam</li>
+        <li>David</li>
+        <li>Alex</li>
+        <li>Ronald</li>
       </ul>
     </section>
-    <script src="app.js"></script>
+    </main>
+    <footer><p><span class="footer-dots">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</span>  © Copyright 2017  <span class="footer-dots">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </span></p></footer>
+
   </body>
 </html>

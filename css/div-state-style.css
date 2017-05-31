@@ -3,17 +3,14 @@ body {
   margin: auto;
   background: black;
 }
-
 header {
   color: white;
 }
-
 .container {
   position: relative;
   width: 1100px;
   overflow: hidden;
 }
-
 img {
   width: 100%;
   margin-left: -1px;
@@ -26,7 +23,6 @@ img {
   left: 150px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(15deg);
 }
 #oregon {
@@ -37,7 +33,6 @@ img {
   left: 105px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(15deg);
 }
 #california {
@@ -48,7 +43,6 @@ img {
   left: 45px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(60deg);
 }
 #nevada {
@@ -59,7 +53,6 @@ img {
   left: 145px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(70deg);
 }
 #idaho {
@@ -70,7 +63,6 @@ img {
   left: 225px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
 }
 #utah {
   position: absolute;
@@ -80,7 +72,6 @@ img {
   left: 245px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(10deg);
 }
 #arizona {
@@ -91,7 +82,6 @@ img {
   left: 225px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(10deg);
 }
 
@@ -103,7 +93,6 @@ img {
   left: 155px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
 }
 #montana {
   position: absolute;
@@ -113,7 +102,6 @@ img {
   left: 285px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(7deg);
 }
 #wyoming {
@@ -124,7 +112,6 @@ img {
   left: 315px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(7deg);
 }
 #colorado {
@@ -135,7 +122,6 @@ img {
   left: 335px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(6deg);
 }
 #newmexico {
@@ -146,7 +132,6 @@ img {
   left: 320px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(6deg);
 }
 #northdakota {
@@ -157,7 +142,6 @@ img {
   left: 440px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(3deg);
 }
 #southdakota {
@@ -168,7 +152,6 @@ img {
   left: 435px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(3deg);
 }
 #nebraska {
@@ -179,7 +162,6 @@ img {
   left: 465px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(5deg);
 }
 #kansas {
@@ -190,7 +172,6 @@ img {
   left: 460px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(2deg);
 }
 #oklahoma {
@@ -201,7 +182,6 @@ img {
   left: 495px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(3deg);
 }
 #texas {
@@ -212,7 +192,6 @@ img {
   left: 430px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(9deg);
 }
 #hawaii {
@@ -233,7 +212,6 @@ img {
   left: 560px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
 }
 #iowa {
   position: absolute;
@@ -243,7 +221,6 @@ img {
   left: 570px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
 }
 #missouri {
   position: absolute;
@@ -253,7 +230,6 @@ img {
   left: 590px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-5deg);
 }
 #arkansas {
@@ -264,7 +240,6 @@ img {
   left: 600px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-3deg);
 }
 #louisiana {
@@ -275,7 +250,6 @@ img {
   left: 615px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-3deg);
 }
 #wisconsin {
@@ -286,7 +260,6 @@ img {
   left: 640px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-35deg);
 }
 #illinois {
@@ -297,7 +270,6 @@ img {
   left: 670px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-5deg);
 }
 #mississippi {
@@ -308,7 +280,6 @@ img {
   left: 670px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(2deg);
 }
 #michigan {
@@ -319,7 +290,6 @@ img {
   left: 735px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-15deg);
 }
 #indiana {
@@ -330,7 +300,6 @@ img {
   left: 720px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-9deg);
 }
 #kentucky {
@@ -341,7 +310,6 @@ img {
   left: 745px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-22deg);
 }
 #tennessee {
@@ -352,7 +320,6 @@ img {
   left: 690px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-8deg);
 }
 #alabama {
@@ -363,7 +330,6 @@ img {
   left: 720px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-6deg);
 }
 #ohio {
@@ -374,7 +340,6 @@ img {
   left: 765px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-5deg);
 }
 #georgia {
@@ -385,7 +350,6 @@ img {
   left: 780px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-15deg);
 }
 #florida {
@@ -396,7 +360,6 @@ img {
   left: 845px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-25deg);
 }
 #newyork {
@@ -407,7 +370,6 @@ img {
   left: 900px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-15deg);
 }
 #pennsylvania {
@@ -418,7 +380,6 @@ img {
   left: 840px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-10deg);
 }
 #westvirginia {
@@ -429,7 +390,6 @@ img {
   left: 820px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(35deg);
 }
 #virginia {
@@ -440,7 +400,6 @@ img {
   left: 860px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-10deg);
 }
 #northcarolina {
@@ -451,7 +410,6 @@ img {
   left: 850px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(-8deg);
 }
 #southcarolina {
@@ -462,10 +420,9 @@ img {
   left: 825px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
   transform: rotate(28deg);
 }
-#maine {
+#massachusetts {
   position: absolute;
   width: 25px;
   height: 60px;
@@ -473,13 +430,12 @@ img {
   left: 980px;
   cursor: pointer;
   background: #000;
-  border: solid 1px green;
 }
 #vermont {
   position: absolute;
   width: 35px;
-  height: 25px;
-  top: 110px;
+  height: 17px;
+  top: 114px;
   left: 915px;
   cursor: pointer;
   background: #000;
@@ -488,17 +444,18 @@ img {
 #newhampshire {
   position: absolute;
   width: 35px;
-  height: 25px;
-  top: 169px;
+  height: 17px;
+  top: 175px;
   left: 1025px;
   cursor: pointer;
   background: #000;
   border: solid 2px #6efdff;
 }
-#massachusetts {
+
+#maine {
   position: absolute;
   width: 35px;
-  height: 25px;
+  height: 17px;
   top: 197px;
   left: 1025px;
   cursor: pointer;
@@ -508,8 +465,8 @@ img {
 #rhodeisland {
   position: absolute;
   width: 35px;
-  height: 25px;
-  top: 245px;
+  height: 17px;
+  top: 253px;
   left: 990px;
   cursor: pointer;
   background: #000;
@@ -518,8 +475,8 @@ img {
 #connecticut {
   position: absolute;
   width: 35px;
-  height: 25px;
-  top: 275px;
+  height: 17px;
+  top: 279px;
   left: 975px;
   cursor: pointer;
   background: #000;
@@ -528,8 +485,8 @@ img {
 #newjersey {
   position: absolute;
   width: 35px;
-  height: 20px;
-  top: 300px;
+  height: 18px;
+  top: 302px;
   left: 975px;
   cursor: pointer;
   background: #000;
@@ -538,8 +495,8 @@ img {
 #delaware {
   position: absolute;
   width: 35px;
-  height: 20px;
-  top: 323px;
+  height: 17px;
+  top: 325px;
   left: 975px;
   cursor: pointer;
   background: #000;
@@ -548,8 +505,8 @@ img {
 #maryland {
   position: absolute;
   width: 35px;
-  height: 20px;
-  top: 345px;
+  height: 17px;
+  top: 347px;
   left: 975px;
   cursor: pointer;
   background: #000;
