@@ -20,7 +20,6 @@ var scoresArray = [
 
 saveArray();
 
-
 //if localStorage.savedArray exists, parse that into the scoresArray variable.
 // if (localStorage.savedArray) {
 //   var scoresArray = JSON.parse(localStorage.getItem('savedArray'));
@@ -90,9 +89,11 @@ startButton.addEventListener('click', startGame);
 function startGame() {
   var tempUser = new NewUserObject(inputBox.value);
   localStorage.setItem('savedUser', JSON.stringify(tempUser));
-    // function to run game logic from Jonah
-    // gameLogic();
-  }
+  // function to run game logic from Jonah
+  // gameLogic();
+}
+
+
 
 // pulls savedUser data from localStorage and increments score by 1,
 // then resaves the data.
