@@ -65,14 +65,21 @@ function verify(answer, clicked) {
     }
   } else {
     console.log('finished');
-    gameOverText();
+    gameOverText(answer, clicked);
     removeListener();
   }
 }
 
-function gameOverText() {
+function gameOverText(answer, clicked) {
   if (index === 10) {
     populateHeader.innerHTML = 'GAME OVER';
+  }
+  if (answer === clicked) {
+    incrementScore();
+    updateUserScore();
+    removeDiv(answer);
+  } else {
+    return;
   }
 }
 
