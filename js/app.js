@@ -5,13 +5,28 @@ var inputBox = document.getElementById('input');
 var startButton = document.getElementById('start-btn');
 var highScore = document.getElementById('high-score');
 
+var scoresArray = [
+  { name: 'Daffy', score: 15 },
+  { name: 'Daisy', score: 13 },
+  { name: 'Donald', score: 6 },
+  { name: 'Scrooge', score: 8 },
+  { name: 'Plucky', score: 11 },
+  { name: 'Howard', score: 7 },
+  { name: 'Ferdinand', score: 10 },
+  { name: 'Ludwig Von Drake', score: 17 },
+  { name: 'Orville', score: 9 },
+  { name: 'Launchpad', score: 9 }
+];
+
+saveArray();
+
 //if localStorage.savedArray exists, parse that into the scoresArray variable.
-if (localStorage.savedArray) {
-  var scoresArray = JSON.parse(localStorage.getItem('savedArray'));
-} else {
-  // otherwise, create an empty array.
-  var scoresArray = [];
-}
+// if (localStorage.savedArray) {
+//   var scoresArray = JSON.parse(localStorage.getItem('savedArray'));
+// } else {
+//   // otherwise, create an empty array.
+//   var scoresArray = [];
+// }
 
 // constructor function for new user object
 function NewUserObject(name) {
@@ -56,15 +71,18 @@ function renderHighScores() {
   inputBox.value = '';
 }
 
-sortArray();
+sortArray(scoresArray);
 renderHighScores();
 
 // dummy function that returns the user object from localStorage
-function gameLogic() {
-  var temp = new NewUserObject('George');
-  temp.score = 10;
-  return temp;
-}
+// function gameLogic() {
+//   var temp = new NewUserObject('George');
+//   temp.score = 10;
+//   return temp;
+// }
+
+// listen for click on the startButton element and run startGame function
+startButton.addEventListener('click', startGame);
 
 // starts game. pulls name from input box and creates user object, saves that
 // to localStorage and then clears the input box.
@@ -72,11 +90,10 @@ function startGame() {
   var tempUser = new NewUserObject(inputBox.value);
   localStorage.setItem('savedUser', JSON.stringify(tempUser));
   // function to run game logic from Jonah
-  gameLogic();
+  // gameLogic();
 }
 
-// listen for click on the startButton element and run startGame function
-startButton.addEventListener('click', startGame);
+
 
 // pulls savedUser data from localStorage and increments score by 1,
 // then resaves the data.
@@ -90,21 +107,3 @@ function endGame() {
   window.location.href = 'end.html';
   saveArray();
 }
-
-
-
-
-
-
-// scoresArray = [
-//   { name: 'Daffy', score: 15 },
-//   { name: 'Daisy', score: 13 },
-//   { name: 'Donald', score: 6 },
-//   { name: 'Scrooge', score: 8 },
-//   { name: 'Plucky', score: 11 },
-//   { name: 'Howard', score: 7 },
-//   { name: 'Ferdinand', score: 10 },
-//   { name: 'Ludwig Von Drake', score: 17 },
-//   { name: 'Orville', score: 9 },
-//   { name: 'Launchpad', score: 9 }
-// ];
