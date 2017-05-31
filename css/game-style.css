@@ -1,0 +1,16 @@
+div {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin: 3px 3px;
+  font: 22px bold;
+  outline: 1px orange solid;
+}
+
+.odd {
+  background: blue;
+}
+
+.even {
+  background: yellow;
+}
