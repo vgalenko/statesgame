@@ -39,6 +39,25 @@ img {
   margin-top: -1px;
 }
 
+<<<<<<< HEAD
+=======
+#nextarrow {
+  position: absolute;
+  width: 512px;
+  height: 512px;
+  top: 110px;
+  left: 310px;
+  background-image: url('../assets/img/circle-arrow.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  display: none;
+}
+
+>>>>>>> d202122ac654c54cc7608abe760b95d9b4adfbfd
 #washington {
   position: absolute;
   width: 80px;
