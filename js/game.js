@@ -18,7 +18,7 @@ function instantiateStateObj() {
 
 var statesObj = [];
 
-var index = 1;
+var index = 0;
 var populateHeader = document.getElementById('populate-header');
 
 var answer;
@@ -36,23 +36,39 @@ for (var i = 0; i < statesVar.length; i++) {
   );
 }
 
+
 function verify(answer, clicked) {
   console.log('answer is', answer);
   console.log('clicked is', clicked);
 
-  if (answer === clicked) {
-    console.log('win');
-    index++;
-    askQuestion();
+  if (index < 10) {
+    if (answer === clicked) {
+      console.log('win - counter at:', index);
+      index++;
+      removeDiv(answer);
+      askQuestion();
+    } else {
+      console.log('loser - counter at:', index);
+      index++;
+      askQuestion();
+    }
   } else {
-    console.log('loser');
-    index++;
-    askQuestion();
+    console.log('finished');
   }
 }
 
+// removes div
+function removeDiv(answer) {
+  var el = document.getElementById(answer);
+  el.remove();
+}
 
 
+// function removeListener() {
+//   for (var i = 0; i < statesVar.length; i++) {
+//     document.getElementById(statesVar[i]).onclick = null;
+//   }
+// }
 
 
 
