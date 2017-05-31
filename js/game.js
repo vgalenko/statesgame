@@ -52,6 +52,7 @@ function verify(answer, clicked) {
       console.log('win - counter at:', index);
       index++;
       removeDiv(answer);
+      incrementScore();
       askQuestion();
     } else {
       console.log('loser - counter at:', index);
