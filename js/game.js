@@ -18,11 +18,10 @@ function instantiateStateObj() {
 
 var statesObj = [];
 
-var index = 0;
+var index = 1;
 var populateHeader = document.getElementById('populate-header');
 
 var answer;
-var clicked;
 
 function askQuestion() {
   answer = shuffledStates[index];
@@ -42,11 +41,16 @@ function verify(answer, clicked) {
   console.log('clicked is', clicked);
 
   if (answer === clicked) {
-    console.log('this works');
+    console.log('win');
+    index++;
+    askQuestion();
   } else {
     console.log('loser');
+    index++;
+    askQuestion();
   }
 }
+
 
 
 
