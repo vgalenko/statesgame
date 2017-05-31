@@ -65,7 +65,7 @@ h3 {
   position: absolute;
   margin-top: 90px;
   color: ##ff0000;
-  font-family: 'pacfont';
+
 }
 #jona {
   width: 200px;
@@ -103,4 +103,44 @@ h3 {
   margin-right: auto;
   border-radius: 5%;
   border: dotted 3px #ffff00;
+}
+ul li {
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 15px;
+  padding: 0px 15px 0px 25px;
+  color: #ffff00;
+  font-family: 'Press Start 2P';
+}
+ul li:nth-child(2) {
+  margin-left: 245px;
+}
+ul li:nth-child(3) {
+  margin-left: 470px;
+}
+ul li:nth-child(4) {
+  margin-left: 695px;
+}
+button {
+  margin-left: 43%;
+  border: 3px dotted blue;
+  padding: 8px 18px;
+  background: black;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-animation: glowing 1500ms infinite;
+  }
+
+ @-webkit-keyframes glowing {
+  0% { background-color: pink;}
+  50% { background-color: red; }
+  100% { background-color: green;}
 }
