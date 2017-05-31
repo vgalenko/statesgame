@@ -1,16 +1,5 @@
-div {
-  width: 60px;
-  height: 60px;
-  float: left;
-  margin: 3px 3px;
-  font: 22px bold;
-  outline: 1px orange solid;
-}
-
-.odd {
-  background: blue;
-}
-
-.even {
-  background: yellow;
+p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 28px;
+  text-align: center;
 }
