@@ -77,8 +77,8 @@ var userStats = document.getElementById('user-score');
 
 function updateUserScore() {
   var userObj = JSON.parse(localStorage.savedUser);
-  userStats.innerHTML = userObj.name + userObj.score;
-  // userStats.innerHTML = 'UN: ' + userObj.name + ' &#10003;: ' + userObj.score;
+  // userStats.innerHTML = userObj.name + userObj.score;
+  userStats.innerHTML = 'Name: ' + userObj.name + ' ... ' + ' Score: ' + userObj.score;
 }
 
 
@@ -111,6 +111,7 @@ function launchGame() {
   instantiateStateObj();
   shuffledStates.shuffle();
   askQuestion();
+  updateUserScore();
 }
 
 launchGame();
