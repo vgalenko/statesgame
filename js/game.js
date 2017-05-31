@@ -28,7 +28,7 @@ var answer;
 function askQuestion() {
   answer = shuffledStates[index];
   var populateAnswer = statesObj[statesVar.indexOf(answer)].statesName;
-  populateHeader.innerHTML = populateAnswer;
+  populateHeader.innerHTML = 'Where is ' + populateAnswer + '?';
 }
 
 for (var i = 0; i < statesVar.length; i++) {
@@ -56,6 +56,7 @@ function verify(answer, clicked) {
       index++;
       removeDiv(answer);
       incrementScore();
+      updateUserScore();
       askQuestion();
     } else {
       console.log('loser - counter at:', index);
@@ -64,9 +65,25 @@ function verify(answer, clicked) {
     }
   } else {
     console.log('finished');
+    gameOverText();
     removeListener();
   }
 }
+
+function gameOverText() {
+  if (index === 10) {
+    populateHeader.innerHTML = 'GAME OVER';
+  }
+}
+
+var userStats = document.getElementById('user-score');
+
+function updateUserScore() {
+  var userObj = JSON.parse(localStorage.savedUser);
+  userStats.innerHTML = userObj.name + userObj.score;
+  // userStats.innerHTML = 'UN: ' + userObj.name + ' &#10003;: ' + userObj.score;
+}
+
 
 // removes div
 function removeDiv(answer) {
