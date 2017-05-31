@@ -59,7 +59,7 @@ input[type="text"] {
   width: 200px;
 }
 
-button {
+#start-btn {
   margin-top: 50px;
   margin-left: 43%;
   border: 3px solid blue;
