@@ -63,7 +63,7 @@ function renderHighScores() {
     // create a <li></li> in memory
     var listItem = document.createElement('li');
     // insert each array index into the <li></li> in memory
-    listItem.innerHTML = scoresArray[i].score + ' : ' + scoresArray[i].name;
+    listItem.innerHTML = scoresArray[i].name +  ' ....... ' + scoresArray[i].score ;
     // insert the <li></li> into the highScore element
     highScore.appendChild(listItem);
   }
