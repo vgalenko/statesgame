@@ -41,7 +41,7 @@ function verifyCallback() {
 
 function removeListener() {
   for (var i = index; i < shuffledStates.length; i++) {
-    document.getElementById(shuffledStates[i] - 1).removeEventListener('click', verifyCallback);
+    document.getElementById(shuffledStates[i]).removeEventListener('click', verifyCallback);
   }
   document.getElementById('nextarrow').style.display = 'block';
 }
@@ -71,7 +71,7 @@ function verify(answer, clicked) {
 }
 
 function gameOverText(answer, clicked) {
-  if (index === 10) {
+  if (index < 10) {
     populateHeader.innerHTML = 'GAME OVER';
   }
   if (answer === clicked) {
