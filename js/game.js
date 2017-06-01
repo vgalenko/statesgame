@@ -20,7 +20,7 @@ function instantiateStateObj() {
 
 var statesObj = [];
 
-var index = 0;
+var index = 1;
 var populateHeader = document.getElementById('populate-header');
 
 var answer;
@@ -40,7 +40,7 @@ function verifyCallback() {
 }
 
 function removeListener() {
-  for (var i = index; i < shuffledStates.length; i++) {
+  for (var i = index + 1; i < shuffledStates.length; i++) {
     document.getElementById(shuffledStates[i]).removeEventListener('click', verifyCallback);
   }
   document.getElementById('nextarrow').style.display = 'block';
@@ -71,11 +71,9 @@ function verify(answer, clicked) {
 }
 
 function gameOverText(answer, clicked) {
-  if (index < 10) {
-    populateHeader.innerHTML = 'GAME OVER';
-  }
+  populateHeader.innerHTML = 'GAME OVER';
+
   if (answer === clicked) {
-    index++;
     incrementScore();
     updateUserScore();
     removeDiv(answer);
