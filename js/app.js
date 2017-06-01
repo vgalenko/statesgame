@@ -20,6 +20,7 @@ var scoresArray = [
 
 saveArray();
 
+
 //if localStorage.savedArray exists, parse that into the scoresArray variable.
 // if (localStorage.savedArray) {
 //   var scoresArray = JSON.parse(localStorage.getItem('savedArray'));
@@ -84,9 +85,16 @@ renderHighScores();
 // listen for click on the startButton element and run startGame function
 startButton.addEventListener('click', startGame);
 
+function startGame() {
+  if (inputBox.value === '') {
+    inputBox.value = 'NO NAME';
+    saveUser();
+  }
+}
+
 // starts game. pulls name from input box and creates user object, saves that
 // to localStorage and then clears the input box.
-function startGame() {
+function saveUser() {
   var tempUser = new NewUserObject(inputBox.value);
   localStorage.setItem('savedUser', JSON.stringify(tempUser));
   // function to run game logic from Jonah
