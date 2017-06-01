@@ -1,7 +1,15 @@
 body {
   width: 1100px;
   margin: auto;
-  background: gray;
+  background: black;
+}
+
+h1 {
+  float: left;
+  margin-left: 40%;
+  font-family: 'pacfont';
+  font-size: 40px;
+  color: #00ffde;
 }
 
 @font-face {
@@ -9,100 +17,79 @@ body {
 	src: url('../assets/fonts/pac-font.ttf');
 }
 
-h1 {
-  display: inline-block;
-  position: relative;
-  font-family: 'pacfont';
-  font-size: 40px;
-  color: #e71b1e;
-}
-h2 {
-  display: inline-block;
-  position: relative;
-  font-family: 'pacfont';
-  font-size: 40px;
-  color: #f69311;
-  margin-top: -55px;
-}
-#h1 {
-  -webkit-animation: h1 4s;
-  animation: h1 4s;
-  margin-left: 320px;
-  }
-
- @-webkit-keyframes h1 {
-  from {right: 500px;}
-  to {right: 0px;}
-  }
-
-#h2 {
-  -webkit-animation: h2 4s;
-  animation: h2 4s;
-  margin-left: 20px;
+p {
+  position: absolute;
+  font-family: fantasy;
+  font-weight: 600;
+  color:white;
+  font-size: 24px;
+  top: 150px;
 }
 
- @-webkit-keyframes h2 {
-  from {left: 500px;}
-  to {left: 0px;}
+#jonah-name {
+  left: 190px;
 }
+
+#vitaliy-name {
+  left: 420px;
+}
+
+#slavik-name {
+  left: 650px;
+}
+
+#tim-name {
+  left: 890px;
+}
+
 section img {
-  position: fixed;
-  opacity: 0.5;
-  border-radius: 2%;
-  background-color: #555;
-  box-shadow: 0 0 5px 30px #555;
-  z-index: -1;
-}
-h3 {
+  position: relative;
   float: left;
-  padding-left: 35%;
-  font-family: 'pacfont';
-  font-size: 40px;
-  color: #00ffde;
+  opacity: 0.2;
+  height: 670px;
+  width: 100%;
 }
+
+
 .aboutus{
   float: left;
   position: absolute;
   margin-top: 90px;
   color: ##ff0000;
 }
-#jona {
+#jonah-pic {
   width: 200px;
   height: auto;
   position: absolute;
   margin-top: 10px;
-  margin-left: 75px;
-  border-radius: 5%;
-  border: dotted 3px #ff0000;
+  margin-left: 125px;
+  border-radius: 50%;
 }
-#vitaliy {
+#vitaliy-pic {
   width: 200px;
   height: auto;
   position: absolute;
   margin-top: 10px;
-  margin-left: 310px;
-  border-radius: 5%;
-  border: dotted 3px #ffb8de;
+  margin-left: 350px;
+  border-radius: 50%;
 }
-#slavik {
+#slavik-pic {
   width: 200px;
   height: auto;
   position: absolute;
   margin-top: 10px;
-  margin-left: 530px;
-  border-radius: 5%;
-  border: dotted 3px #ffb847;
+  margin-left: 580px;
+  border-radius: 50%;
 }
-#tim {
+#tim-pic {
   width: 200px;
   height: auto;
   position: absolute;
   margin-top: 10px;
-  margin-left: 755px;
-  margin-right: auto;
-  border-radius: 5%;
-  border: dotted 3px #ffff00;
+  margin-left: 805px;
+  border-radius: 50%;
 }
+
 ul li {
   width: 200px;
   display: inline-block;
@@ -110,27 +97,25 @@ ul li {
   text-align: center;
   line-height: 20px;
   margin-top: 260px;
-  margin-right: 10px;
-  margin-left: 15px;
+  margin-left: 55px;
   padding: 0px 15px 0px 25px;
-  color: #ffff00;
+  color: orange;
   font-family: 'Press Start 2P';
 }
 ul li:nth-child(2) {
-  margin-left: 245px;
+  margin-left: 285px;
 }
 ul li:nth-child(3) {
-  margin-left: 470px;
+  margin-left: 520px;
 }
 ul li:nth-child(4) {
-  margin-left: 695px;
+  margin-left: 745px;
 }
 button {
-  margin-top: 210px;
-  margin-left: 390px;
-  border: 3px dotted blue;
+  float: left;
+  margin-left: 40%;
+  border: 3px solid blue;
   padding: 8px 18px;
-  background: black;
   color: #fff;
   border-radius: 40px;
   cursor: pointer;
