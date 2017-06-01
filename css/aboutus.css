@@ -1,8 +1,64 @@
+/* Global Styles */
+
 body {
   width: 1100px;
   margin: auto;
   background: black;
 }
+
+@font-face {
+	font-family: 'pacfont';
+	src: url('../assets/fonts/pac-font.ttf');
+}
+
+/* Header, Stats Display, and Button */
+
+header {
+  margin: 60px auto;
+  padding: 30px 0px;
+  border: 5px white dotted;
+}
+
+.display-stats {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: white;
+}
+
+#display-stats-line-one {
+  padding: 10px 0;
+}
+
+/* Button */
+
+.btn-box {
+  width: 1100px;
+  text-align:center;
+  margin:auto;
+}
+
+button {
+  height: 50px;
+  border: 3px solid blue;
+  padding: 8px 18px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #fff;
+  -webkit-animation: glowing 1500ms infinite;
+  }
+
+@-webkit-keyframes glowing {
+  0% { background-color: pink;}
+  50% { background-color: red; }
+  100% { background-color: green;}
+}
+
+/* About Us */
 
 h1 {
   float: left;
@@ -11,11 +67,6 @@ h1 {
   font-family: 'pacfont';
   font-size: 40px;
   color: #00ffde;
-}
-
-@font-face {
-	font-family: 'pacfont';
-	src: url('../assets/fonts/pac-font.ttf');
 }
 
 p {
@@ -116,24 +167,4 @@ ul li:nth-child(3) {
 
 ul li:nth-child(4) {
   margin-left: 745px;
-}
-
-button {
-  float: left;
-  margin-left: 40%;
-  margin-top: 40px;
-  border: 3px solid blue;
-  padding: 8px 18px;
-  color: #fff;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
-  -webkit-animation: glowing 1500ms infinite;
-  }
-
- @-webkit-keyframes glowing {
-  0% { background-color: pink;}
-  50% { background-color: red; }
-  100% { background-color: green;}
 }
