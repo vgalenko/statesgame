@@ -86,7 +86,7 @@ startButton.addEventListener('click', startGame);
 
 function startGame() {
   if (inputBox.value === '') {
-    inputBox.value = 'NO NAME';
+    inputBox.value = '___';
   }
   saveUser();
 }
