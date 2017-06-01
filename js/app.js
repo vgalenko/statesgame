@@ -5,29 +5,28 @@ var inputBox = document.getElementById('input');
 var startButton = document.getElementById('start-btn');
 var highScore = document.getElementById('high-score');
 
-var scoresArray = [
-  { name: 'Daffy', score: 15 },
-  { name: 'Daisy', score: 13 },
-  { name: 'Donald', score: 6 },
-  { name: 'Scrooge', score: 8 },
-  { name: 'Plucky', score: 11 },
-  { name: 'Howard', score: 7 },
-  { name: 'Ferdinand', score: 10 },
-  { name: 'Ludwig Von Drake', score: 17 },
-  { name: 'Orville', score: 9 },
-  { name: 'Launchpad', score: 9 }
-];
+// var scoresArray = [
+//   { name: 'Daffy', score: 15 },
+//   { name: 'Daisy', score: 13 },
+//   { name: 'Donald', score: 6 },
+//   { name: 'Scrooge', score: 8 },
+//   { name: 'Plucky', score: 11 },
+//   { name: 'Howard', score: 7 },
+//   { name: 'Ferdinand', score: 10 },
+//   { name: 'Ludwig', score: 17 },
+//   { name: 'Orville', score: 9 },
+//   { name: 'Launchpad', score: 9 }
+// ];
+
+// if localStorage.savedArray exists, parse that into the scoresArray variable.
+if (localStorage.savedArray) {
+  var scoresArray = JSON.parse(localStorage.savedArray);
+} else {
+  // otherwise, create an empty array.
+  var scoresArray = [];
+}
 
 saveArray();
-
-
-//if localStorage.savedArray exists, parse that into the scoresArray variable.
-// if (localStorage.savedArray) {
-//   var scoresArray = JSON.parse(localStorage.getItem('savedArray'));
-// } else {
-//   // otherwise, create an empty array.
-//   var scoresArray = [];
-// }
 
 // constructor function for new user object
 function NewUserObject(name) {
@@ -88,17 +87,22 @@ startButton.addEventListener('click', startGame);
 function startGame() {
   if (inputBox.value === '') {
     inputBox.value = 'NO NAME';
-    saveUser();
   }
+  saveUser();
+}
+
+function updateScoresArray() {
+  //var tempUser = JSON.parse(localStorage.savedUser);
+  console.log(JSON.parse(localStorage.savedUser));
+  scoresArray.push(JSON.parse(localStorage.savedUser));
+  //console.log();
 }
 
 // starts game. pulls name from input box and creates user object, saves that
 // to localStorage and then clears the input box.
 function saveUser() {
   var tempUser = new NewUserObject(inputBox.value);
-  localStorage.setItem('savedUser', JSON.stringify(tempUser));
-  // function to run game logic from Jonah
-  // gameLogic();
+  localStorage.savedUser =  JSON.stringify(tempUser);
 }
 
 
