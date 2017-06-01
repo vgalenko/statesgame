@@ -4,14 +4,17 @@ var statesVar = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colo
 
 var statesName = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
+// stores an array of shuffled states
 var shuffledStates = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'newhampshire', 'newjersey', 'newmexico', 'newyork', 'northcarolina', 'northdakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhodeisland', 'southcarolina', 'southdakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'westvirginia', 'wisconsin', 'wyoming'];
 
+// constructor for state objects
 function States(statesVar, stateName) {
   this.statesVar = statesVar;
   this.statesName = stateName;
   this.asked = false;
 }
 
+// instantiates state objects
 function instantiateStateObj() {
   for (var i = 0; i < statesVar.length; i++) {
     statesObj.push(new States(statesVar[i], statesName[i]));
@@ -35,6 +38,7 @@ for (var i = 0; i < statesVar.length; i++) {
   document.getElementById(statesVar[i]).addEventListener('click', verifyCallback);
 }
 
+// callback function for event listener to verify answer with clicked id
 function verifyCallback() {
   verify(answer, event.target.id);
 }
@@ -65,12 +69,12 @@ function verify(answer, clicked) {
     }
   } else {
     console.log('finished');
-    gameOverText(answer, clicked);
+    gameOver(answer, clicked);
     removeListener();
   }
 }
 
-function gameOverText(answer, clicked) {
+function gameOver(answer, clicked) {
   populateHeader.innerHTML = 'GAME OVER';
 
   if (answer === clicked) {
@@ -90,12 +94,10 @@ var userStats = document.getElementById('user-score');
 
 function updateUserScore() {
   var userObj = JSON.parse(localStorage.savedUser);
-  // userStats.innerHTML = userObj.name + userObj.score;
   userStats.innerHTML = 'Name: ' + userObj.name + ' ... ' + ' Score: ' + userObj.score;
 }
 
-
-// removes div
+// removes divs from states
 function removeDiv(answer) {
   var el = document.getElementById(answer);
   el.remove();
