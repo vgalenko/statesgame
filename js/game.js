@@ -20,7 +20,7 @@ function instantiateStateObj() {
 
 var statesObj = [];
 
-var index = 1;
+var index = 0;
 var populateHeader = document.getElementById('populate-header');
 
 var answer;
@@ -50,7 +50,7 @@ function verify(answer, clicked) {
   console.log('answer is', answer);
   console.log('clicked is', clicked);
 
-  if (index < 10) {
+  if (index < 9) {
     if (answer === clicked) {
       console.log('win - counter at:', index);
       index++;
