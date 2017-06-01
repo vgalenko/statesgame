@@ -77,7 +77,11 @@ function gameOverText(answer, clicked) {
     incrementScore();
     updateUserScore();
     removeDiv(answer);
+    updateScoresArray();
+    saveArray();
   } else {
+    updateScoresArray();
+    saveArray();
     return;
   }
 }
