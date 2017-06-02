@@ -2,14 +2,9 @@ h1 {
   display: inline-block;
   position: relative;
   padding: 30px 0px 30px 0px;
-  font-family: pacfont;
+  font-family: 'Press Start 2P', cursive;;
   font-size: 46px;
-  color: yellow;
-}
-
-@font-face {
-  font-family: pacfont;
-  src: url('../assets/fonts/pac-font.ttf');
+  color: white;
 }
 
 #states {
@@ -117,13 +112,13 @@ footer p {
 
 .footer-dots {
   display: inline;
-  font-family: pacfont;
-  font-size: 26px;
-  color: white;
+  font-family: 'Press Start 2P', cursive;;
+  font-size: 24px;
+  color: yellow;
 }
 
 #top-dots {
-  font-size: 32px;
-  color: white;
-  font-family: pacfont;
+  font-size: 24px;
+  color: yellow;
+  font-family: 'Press Start 2P', cursive;;
 }
