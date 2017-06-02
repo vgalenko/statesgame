@@ -65,13 +65,6 @@ function renderHighScores() {
 sortScores();
 renderHighScores();
 
-// dummy function that returns the user object from localStorage
-// function gameLogic() {
-//   var temp = new NewUserObject('George');
-//   temp.score = 10;
-//   return temp;
-// }
-
 // listen for click on the startButton element and run startGame function
 startButton.addEventListener('click', startGame);
 
@@ -83,14 +76,10 @@ function startGame() {
 }
 
 function updateScoresArray() {
-  //var tempUser = JSON.parse(localStorage.savedUser);
-  console.log(JSON.parse(localStorage.savedUser));
   scoresArray.push(JSON.parse(localStorage.savedUser));
-  //console.log();
 }
 
-// pulls savedUser data from localStorage and increments score by 1,
-// then resaves the data.
+// pulls savedUser data from localStorage and increments score by 1, then resaves the data.
 function incrementScore() {
   var tempUser = JSON.parse(localStorage.getItem('savedUser'));
   tempUser.score += 1;
