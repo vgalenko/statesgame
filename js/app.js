@@ -37,16 +37,7 @@ function loadArray() {
   scoresArray = JSON.parse(localStorage.savedArray);
 }
 
-// // sorts input array of user objects by score property
-// function sortArray(inputArray) {
-//   // sort array by score property
-//   inputArray.sort(function (a, b) {
-//     return b.score - a.score;
-//   });
-//   // return sorted array
-//   inputArray = inputArray.slice(0,9);
-//   return inputArray;
-// }
+// sorts scores and returns top ten sorted
 function sortScores() {
   scoresArray.sort(function (a, b) {
     return b.score - a.score;
@@ -97,8 +88,6 @@ function updateScoresArray() {
   scoresArray.push(JSON.parse(localStorage.savedUser));
   //console.log();
 }
-
-
 
 // pulls savedUser data from localStorage and increments score by 1,
 // then resaves the data.
