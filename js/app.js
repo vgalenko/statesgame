@@ -5,28 +5,14 @@ var inputBox = document.getElementById('input');
 var startButton = document.getElementById('start-btn');
 var highScore = document.getElementById('high-score');
 
-// var scoresArray = [
-//   { name: 'Daffy', score: 15 },
-//   { name: 'Daisy', score: 13 },
-//   { name: 'Donald', score: 6 },
-//   { name: 'Scrooge', score: 8 },
-//   { name: 'Plucky', score: 11 },
-//   { name: 'Howard', score: 7 },
-//   { name: 'Ferdinand', score: 10 },
-//   { name: 'Ludwig', score: 17 },
-//   { name: 'Orville', score: 9 },
-//   { name: 'Launchpad', score: 9 }
-// ];
-
 // if localStorage.savedArray exists, parse that into the scoresArray variable.
 if (localStorage.savedArray) {
   var scoresArray = JSON.parse(localStorage.savedArray);
 } else {
   // otherwise, create an empty array.
   var scoresArray = [];
+  saveArray();
 }
-
-saveArray();
 
 // constructor function for new user object
 function NewUserObject(name) {
@@ -34,14 +20,11 @@ function NewUserObject(name) {
   this.score = 0;
 }
 
-// sorts input array of user objects by score property
-function sortArray(inputArray) {
-  // sort array by score property
-  inputArray.sort(function (a, b) {
-    return b.score - a.score;
-  });
-  // return sorted array
-  return inputArray.sort();
+// starts game. pulls name from input box and creates user object, saves that
+// to localStorage and then clears the input box.
+function saveUser() {
+  var tempUser = new NewUserObject(inputBox.value);
+  localStorage.savedUser =  JSON.stringify(tempUser);
 }
 
 // saves scoresArray to localStorage
@@ -54,6 +37,14 @@ function loadArray() {
   scoresArray = JSON.parse(localStorage.savedArray);
 }
 
+// sorts scores and returns top ten sorted
+function sortScores() {
+  scoresArray.sort(function (a, b) {
+    return b.score - a.score;
+  });
+  scoresArray = scoresArray.slice(0,10);
+}
+
 
 // function to loop through scoresArray, insert each index into an <li></li> and
 // then insert the list into the highScore element.
@@ -63,7 +54,7 @@ function renderHighScores() {
     // create a <li></li> in memory
     var listItem = document.createElement('li');
     // insert each array index into the <li></li> in memory
-    listItem.innerHTML = scoresArray[i].score + ' : ' + scoresArray[i].name;
+    listItem.innerHTML = scoresArray[i].name +  ' ....... ' + scoresArray[i].score ;
     // insert the <li></li> into the highScore element
     highScore.appendChild(listItem);
   }
@@ -71,44 +62,24 @@ function renderHighScores() {
   inputBox.value = '';
 }
 
-sortArray(scoresArray);
+sortScores();
 renderHighScores();
-
-// dummy function that returns the user object from localStorage
-// function gameLogic() {
-//   var temp = new NewUserObject('George');
-//   temp.score = 10;
-//   return temp;
-// }
 
 // listen for click on the startButton element and run startGame function
 startButton.addEventListener('click', startGame);
 
 function startGame() {
   if (inputBox.value === '') {
-    inputBox.value = 'NO NAME';
+    inputBox.value = '___';
   }
   saveUser();
 }
 
 function updateScoresArray() {
-  //var tempUser = JSON.parse(localStorage.savedUser);
-  console.log(JSON.parse(localStorage.savedUser));
   scoresArray.push(JSON.parse(localStorage.savedUser));
-  //console.log();
 }
 
-// starts game. pulls name from input box and creates user object, saves that
-// to localStorage and then clears the input box.
-function saveUser() {
-  var tempUser = new NewUserObject(inputBox.value);
-  localStorage.savedUser =  JSON.stringify(tempUser);
-}
-
-
-
-// pulls savedUser data from localStorage and increments score by 1,
-// then resaves the data.
+// pulls savedUser data from localStorage and increments score by 1, then resaves the data.
 function incrementScore() {
   var tempUser = JSON.parse(localStorage.getItem('savedUser'));
   tempUser.score += 1;

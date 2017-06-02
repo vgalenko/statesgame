@@ -6,12 +6,17 @@ body {
   background: black;
 }
 
+/* Header Style */
+
 header {
-  width: 1100px;
-  height: 80px;
+  width: 1096px;
+  height: 70px;
   position: fixed;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
+  padding-top: 20px;
   top: 0;
+  border: 2px yellow dotted;
+  background-color: black;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
   font-size: 28px;
@@ -19,17 +24,16 @@ header {
   z-index: 1;
 }
 
-#populate-header {
-}
-
 #user-score {
   font-size: 16px;
 }
 
+/* Map Styling */
+
 .container {
   width: 1100px;
   position: relative;
-  margin: 50px auto 0px auto;
+  margin: 60px auto 0px auto;
   outline: 2px black solid;
 }
 
@@ -464,7 +468,7 @@ img {
 }
 #maine {
   position: absolute;
-  width: 25px;
+  width: 27px;
   height: 60px;
   top: 100px;
   left: 980px;
@@ -551,4 +555,8 @@ img {
   cursor: pointer;
   background: #000;
   border: solid 2px #f69311;
+}
+
+.clearfix {
+  clear: both;
 }

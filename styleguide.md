@@ -17,7 +17,6 @@ https://fonts.google.com/specimen/Press+Start+2P
 * Orange/Ghost - #ffb847 - rgb(255,184,71)
 * Red/Ghost - #ff0000 - rgb(255,0,0)
 
-
 OR
 
 BLUE: 167/216/255
